@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erdkunde · Frau KIbach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+</head>
+<body class="ek">
+  <nav class="nav" id="nav"></nav>
+  <header class="page-head wrap">
+    <span class="script" style="font-size:1.8rem">unsere Erde entdecken</span>
+    <h1>Erdkunde</h1>
+    <p>Kontinente, Länder und Klima: Wie gut kennst du dich auf unserem Planeten aus?</p>
+  </header>
+  <main class="wrap">
+    <section class="panel">
+      <h2>Quiz: Rund um die Welt</h2>
+      <p class="hint">Wähle die richtige Antwort aus.</p>
+      <div id="quiz"></div>
+    </section>
+    <section class="panel">
+      <h2>Welcher Kontinent?</h2>
+      <p class="hint">Ordne die Länder dem richtigen Kontinent zu.</p>
+      <div id="sorter"></div>
+    </section>
+    <section class="panel">
+      <h2>Lernkarten: Hauptstädte</h2>
+      <p class="hint">Tippe auf ein Land, um seine Hauptstadt zu sehen.</p>
+      <div class="flashcards" id="cards"></div>
+    </section>
+  </main>
+  <footer id="footer"></footer>
+  <script src="script.js"></script>
+  <script>
+    mountQuiz(document.getElementById("quiz"), [
+      { q: "Wie viele Kontinente gibt es?", options: ["7", "5", "6", "9"], answer: 0 },
+      { q: "Welcher ist der größte Ozean der Erde?", options: ["Pazifischer Ozean", "Atlantischer Ozean", "Indischer Ozean", "Arktischer Ozean"], answer: 0 },
+      { q: "Welcher Fluss ist der längste in Deutschland?", options: ["Rhein", "Elbe", "Donau", "Main"], answer: 0, explain: "Der Rhein fließt rund 865 km durch Deutschland." },
+      { q: "Wie heißt der höchste Berg Deutschlands?", options: ["Zugspitze", "Brocken", "Feldberg", "Watzmann"], answer: 0 },
+      { q: "Wie heißt die gedachte Linie, die die Erde in Nord- und Südhalbkugel teilt?", options: ["Äquator", "Nullmeridian", "Wendekreis", "Polarkreis"], answer: 0 },
+      { q: "In welcher Klimazone liegt Deutschland?", options: ["Gemäßigte Zone", "Tropen", "Polarzone", "Subtropen"], answer: 0 },
+      { q: "Wie viele Bundesländer hat Deutschland?", options: ["16", "12", "14", "18"], answer: 0 },
+    ]);
+    mountSorter(document.getElementById("sorter"), [
+      { text: "Frankreich", bin: "Europa" }, { text: "Polen", bin: "Europa" },
+      { text: "Kenia", bin: "Afrika" }, { text: "Ägypten", bin: "Afrika" },
+      { text: "Japan", bin: "Asien" }, { text: "Indien", bin: "Asien" },
+      { text: "Brasilien", bin: "Amerika" }, { text: "Kanada", bin: "Amerika" },
+    ], ["Europa", "Afrika", "Asien", "Amerika"]);
+    mountFlashcards(document.getElementById("cards"), [
+      { front: "Frankreich", back: "Paris" }, { front: "Italien", back: "Rom" },
+      { front: "Spanien", back: "Madrid" }, { front: "Österreich", back: "Wien" },
+      { front: "Polen", back: "Warschau" }, { front: "Norwegen", back: "Oslo" },
+      { front: "Japan", back: "Tokio" }, { front: "Australien", back: "Canberra" },
+    ]);
+  </script>
+</body>
+</html>

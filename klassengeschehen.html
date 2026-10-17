@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Klassengeschehen · Frau KIbach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+</head>
+<body class="kg">
+  <nav class="nav" id="nav"></nav>
+  <header class="page-head wrap">
+    <span class="script" style="font-size:1.8rem">nur für unsere Klasse</span>
+    <h1>Klassengeschehen</h1>
+    <p>Neuigkeiten, Termine und Infos rund um unsere Klasse.</p>
+  </header>
+  <main class="wrap">
+    <form class="panel gate" id="gate">
+      <h2>🔒 Bitte Passwort eingeben</h2>
+      <p class="hint">Dieser Bereich ist nur für unsere Klasse.</p>
+      <input type="password" placeholder="Passwort" autocomplete="current-password" aria-label="Passwort" required>
+      <div class="err" aria-live="polite"></div>
+      <button class="btn" type="submit">Hereinkommen</button>
+    </form>
+
+    <div id="protected" class="hidden">
+      <section class="panel">
+        <h2>Neuigkeiten</h2>
+        <div class="news">
+          <article>
+            <time>Oktober 2026</time>
+            <h3>Willkommen im Klassenbereich!</h3>
+            <p>Hier findet ihr ab jetzt alle wichtigen Infos rund um unsere Klasse.</p>
+          </article>
+          <article>
+            <time>Oktober 2026</time>
+            <h3>Kochprojekt in Hauswirtschaft</h3>
+            <p>Bringt bitte eine Schürze und ein Geschirrtuch mit.</p>
+          </article>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>Termine</h2>
+        <ul class="dates">
+          <li><span class="day">tt.mm.</span> Wandertag</li>
+          <li><span class="day">tt.mm.</span> Elternabend</li>
+          <li><span class="day">tt.mm.</span> Erdkunde-Test</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>Klassendienste</h2>
+        <p>Tafeldienst, Ordnungsdienst und Blumendienst: Wer ist diese Woche dran?</p>
+      </section>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="script.js"></script>
+  <script>
+
+  </script>
+</body>
+</html>

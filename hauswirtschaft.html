@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hauswirtschaft · Frau KIbach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+</head>
+<body class="hw">
+  <nav class="nav" id="nav"></nav>
+  <header class="page-head wrap">
+    <span class="script" style="font-size:1.8rem">rund um Küche & Alltag</span>
+    <h1>Hauswirtschaft</h1>
+    <p>Teste dein Wissen über Ernährung, Lebensmittel und Hygiene in der Küche.</p>
+  </header>
+  <main class="wrap">
+    <section class="panel">
+      <h2>Quiz: Ernährung &amp; Küche</h2>
+      <p class="hint">Wähle die richtige Antwort aus.</p>
+      <div id="quiz"></div>
+    </section>
+    <section class="panel">
+      <h2>Wo wird es gelagert?</h2>
+      <p class="hint">Ordne die Lebensmittel dem richtigen Lagerort zu.</p>
+      <div id="sorter"></div>
+    </section>
+    <section class="panel">
+      <h2>Lernkarten: Küchenbegriffe</h2>
+      <p class="hint">Tippe auf eine Karte, um sie umzudrehen.</p>
+      <div class="flashcards" id="cards"></div>
+    </section>
+  </main>
+  <footer id="footer"></footer>
+  <script src="script.js"></script>
+  <script>
+    mountQuiz(document.getElementById("quiz"), [
+      { q: "Wovon sollte man laut Ernährungspyramide am meisten essen bzw. trinken?", options: ["Getränke wie Wasser", "Süßigkeiten", "Fleisch und Wurst", "Öle und Fette"], answer: 0 },
+      { q: "Wie viele Portionen Obst und Gemüse am Tag werden empfohlen?", options: ["5", "2", "1", "10"], answer: 0, explain: "Die Regel heißt „5 am Tag“." },
+      { q: "Welcher Nährstoff liefert vor allem Energie?", options: ["Kohlenhydrate", "Vitamine", "Mineralstoffe", "Wasser"], answer: 0 },
+      { q: "Was solltest du vor dem Kochen immer zuerst tun?", options: ["Hände waschen", "Den Ofen ausschalten", "Den Tisch decken", "Das Rezept wegräumen"], answer: 0 },
+      { q: "Welches Lebensmittel enthält besonders viel Eiweiß?", options: ["Linsen", "Apfel", "Gurke", "Reiswaffel"], answer: 0 },
+      { q: "Was bedeutet „Mindesthaltbarkeitsdatum“?", options: ["Bis dahin ist das Produkt mindestens gut, oft auch länger", "Danach muss man es sofort wegwerfen", "Das Datum, an dem es hergestellt wurde", "Das Datum, an dem es gekauft wurde"], answer: 0 },
+    ]);
+    mountSorter(document.getElementById("sorter"), [
+      { text: "Milch", bin: "Kühlschrank" }, { text: "Joghurt", bin: "Kühlschrank" }, { text: "Butter", bin: "Kühlschrank" },
+      { text: "Nudeln", bin: "Vorratsschrank" }, { text: "Mehl", bin: "Vorratsschrank" }, { text: "Reis", bin: "Vorratsschrank" },
+      { text: "Fischstäbchen", bin: "Gefrierfach" }, { text: "Speiseeis", bin: "Gefrierfach" }, { text: "Tiefkühlerbsen", bin: "Gefrierfach" },
+    ], ["Kühlschrank", "Vorratsschrank", "Gefrierfach"]);
+    mountFlashcards(document.getElementById("cards"), [
+      { front: "Blanchieren", back: "Lebensmittel kurz in kochendes Wasser geben und dann in Eiswasser abschrecken." },
+      { front: "Julienne", back: "Gemüse in sehr feine, lange Streifen schneiden." },
+      { front: "Garziehen", back: "Bei knapp unter 100 °C sanft garen, das Wasser kocht nicht sprudelnd." },
+      { front: "Mise en Place", back: "Vor dem Kochen alle Zutaten und Geräte bereitstellen." },
+      { front: "Dünsten", back: "Garen im eigenen Saft mit wenig Flüssigkeit und Deckel." },
+      { front: "Abschmecken", back: "Am Ende probieren und mit Gewürzen nachwürzen." },
+    ]);
+  </script>
+</body>
+</html>

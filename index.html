@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frau KIbach · Interaktive Lernseite</title>
+  <meta name="description" content="Interaktive Lerninhalte für Hauswirtschaft, Erdkunde und Informatik.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+</head>
+<body>
+  <nav class="nav" id="nav"></nav>
+
+  <header class="hero wrap">
+    <svg class="rainbow" viewBox="0 0 320 170" aria-hidden="true">
+      <path d="M20 165a140 140 0 0 1 280 0" fill="none" stroke="#c0724a" stroke-width="22" stroke-linecap="round"/>
+      <path d="M50 165a110 110 0 0 1 220 0" fill="none" stroke="#d8a59a" stroke-width="22" stroke-linecap="round"/>
+      <path d="M80 165a80 80 0 0 1 160 0" fill="none" stroke="#d9a441" stroke-width="22" stroke-linecap="round"/>
+      <path d="M110 165a50 50 0 0 1 100 0" fill="none" stroke="#9aa88a" stroke-width="22" stroke-linecap="round"/>
+    </svg>
+    <span class="script">Herzlich willkommen!</span>
+    <h1>Meine interaktive Lernseite</h1>
+    <p class="lead">Hier findest du interaktive Lerninhalte für meine Fächer: Quizze, Lernkarten und kleine Übungen zum Ausprobieren. Such dir ein Fach aus und leg los!</p>
+    <div class="divider" aria-hidden="true">✿</div>
+  </header>
+
+  <main class="wrap">
+    <section class="subjects">
+      <a class="card hw" href="hauswirtschaft.html">
+        <div class="icon"><svg viewBox="0 0 64 64" fill="none" stroke="#a4522f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 30h40v6a20 20 0 0 1-40 0z"/><path d="M8 30h48"/><path d="M24 22c0-4 4-4 4-8M32 22c0-4 4-4 4-8M40 22c0-4 4-4 4-8"/></svg></div>
+        <h2>Hauswirtschaft</h2>
+        <p>Ernährung, Lebensmittel und Küchenwissen rund um den Alltag.</p>
+        <span class="more">entdecken →</span>
+      </a>
+      <a class="card ek" href="erdkunde.html">
+        <div class="icon"><svg viewBox="0 0 64 64" fill="none" stroke="#6f7a5a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="22"/><path d="M10 32h44M32 10c8 8 8 36 0 44M32 10c-8 8-8 36 0 44"/></svg></div>
+        <h2>Erdkunde</h2>
+        <p>Kontinente, Länder, Klima und unsere Erde verstehen.</p>
+        <span class="more">entdecken →</span>
+      </a>
+      <a class="card inf" href="informatik.html">
+        <div class="icon"><svg viewBox="0 0 64 64" fill="none" stroke="#b7862a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="14" width="44" height="30" rx="4"/><path d="M24 52h16M32 44v8"/><path d="M26 25l-5 4 5 4M38 25l5 4-5 4"/></svg></div>
+        <h2>Informatik</h2>
+        <p>Binärzahlen, Computer-Grundlagen und digitales Denken.</p>
+        <span class="more">entdecken →</span>
+      </a>
+      <a class="card kg" href="klassengeschehen.html">
+        <div class="icon"><svg viewBox="0 0 64 64" fill="none" stroke="#b0776b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="24" r="7"/><circle cx="42" cy="24" r="7"/><path d="M10 50c0-8 6-13 12-13s12 5 12 13M30 50c0-8 6-13 12-13s12 5 12 13"/></svg></div>
+        <h2>Klassengeschehen</h2>
+        <p>Neuigkeiten und Termine für die Klasse, mit Passwort.</p>
+        <span class="more">🔒 hereinkommen →</span>
+      </a>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>

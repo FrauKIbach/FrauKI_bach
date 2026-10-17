@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informatik · Frau KIbach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+</head>
+<body class="inf">
+  <nav class="nav" id="nav"></nav>
+  <header class="page-head wrap">
+    <span class="script" style="font-size:1.8rem">digital denken</span>
+    <h1>Informatik</h1>
+    <p>Wie rechnet ein Computer? Probier den Binär-Rechner aus und teste dein Wissen.</p>
+  </header>
+  <main class="wrap">
+    <section class="panel">
+      <h2>Binär-Rechner</h2>
+      <p class="hint">Computer rechnen nur mit 0 und 1. Tippe die Schalter an, bis die gesuchte Zahl entsteht.</p>
+      <div id="binary"></div>
+    </section>
+    <section class="panel">
+      <h2>Quiz: Computer-Grundlagen</h2>
+      <p class="hint">Wähle die richtige Antwort aus.</p>
+      <div id="quiz"></div>
+    </section>
+    <section class="panel">
+      <h2>Eingabe oder Ausgabe?</h2>
+      <p class="hint">Ordne die Geräte richtig zu.</p>
+      <div id="sorter"></div>
+    </section>
+  </main>
+  <footer id="footer"></footer>
+  <script src="script.js"></script>
+  <script>
+    mountBinary(document.getElementById("binary"));
+    mountQuiz(document.getElementById("quiz"), [
+      { q: "Wie viele Bit hat ein Byte?", options: ["8", "2", "10", "16"], answer: 0 },
+      { q: "Was ist die Binärzahl 101 im Zehnersystem?", options: ["5", "3", "101", "7"], answer: 0, explain: "4 + 0 + 1 = 5" },
+      { q: "Was ist ein Algorithmus?", options: ["Eine eindeutige Schritt-für-Schritt-Anleitung", "Ein Computervirus", "Ein Teil der Tastatur", "Ein Speicherchip"], answer: 0 },
+      { q: "Welches Passwort ist am sichersten?", options: ["T0m@te!Sonne#42", "123456", "passwort", "MeinName"], answer: 0 },
+      { q: "Wofür steht die Abkürzung CPU?", options: ["Central Processing Unit", "Computer Power Unit", "Central Print Unit", "Control Program Unit"], answer: 0 },
+      { q: "Was ist größer?", options: ["1 Gigabyte", "1 Megabyte", "1 Kilobyte", "1 Byte"], answer: 0 },
+    ]);
+    mountSorter(document.getElementById("sorter"), [
+      { text: "Tastatur", bin: "Eingabegerät" }, { text: "Maus", bin: "Eingabegerät" }, { text: "Mikrofon", bin: "Eingabegerät" }, { text: "Scanner", bin: "Eingabegerät" },
+      { text: "Bildschirm", bin: "Ausgabegerät" }, { text: "Drucker", bin: "Ausgabegerät" }, { text: "Lautsprecher", bin: "Ausgabegerät" }, { text: "Beamer", bin: "Ausgabegerät" },
+    ], ["Eingabegerät", "Ausgabegerät"]);
+  </script>
+</body>
+</html>
