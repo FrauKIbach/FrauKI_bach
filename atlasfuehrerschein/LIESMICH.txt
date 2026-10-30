@@ -1,0 +1,37 @@
+DIGITALER ATLASFÜHRERSCHEIN – Website ohne Moodle
+==================================================
+
+Inhalt dieses Ordners
+- index.html ............ Startseite (Willkommen + Kursübersicht)
+- 03-… bis 24-….html .... alle Kursabschnitte, mit Navigation wie im Moodle-Kurs
+- glossar.html .......... Glossar mit Suchfeld
+- vortest.html .......... Vortest (10 zufällige Fragen, beliebig oft)
+- abschlusstest.html .... Abschlusstest (12 zufällige Fragen, Ergebnis druckbar) + Urkunde (PDF)
+- lehrkraefte.html ...... Hinweise für Lehrkräfte (unten auf jeder Seite verlinkt)
+- h5p/, h5p-player/ ..... die interaktiven H5P-Übungen und der Player
+- media/ ................ Bilder, Audios, PDFs
+
+WICHTIG: Die Seite muss über einen Webserver laufen
+Die Texte, Bilder und Tests funktionieren auch per Doppelklick auf index.html.
+Die interaktiven H5P-Übungen laden aber nur, wenn die Seite über eine
+Web-Adresse aufgerufen wird, z. B. über GitHub Pages.
+
+Auf GitHub Pages veröffentlichen
+1. Den ganzen Ordner "atlasfuehrerschein" in das Repository der Homepage legen,
+   also neben die bisherige index.html.
+2. Danach ist der Kurs erreichbar unter:  https://<benutzername>.github.io/atlasfuehrerschein/
+Hinweis: Der Upload im Browser auf github.com nimmt höchstens 100 Dateien auf einmal.
+Dieser Ordner hat rund 3.300 Dateien. Deshalb besser GitHub Desktop benutzen
+(Ordner ins lokale Repository kopieren → "Commit" → "Push").
+
+Was gegenüber Moodle anders ist
+- Keine Anmeldung, es werden keine Ergebnisse gespeichert. Am Ende des Abschlusstests
+  können die Kinder ihren Namen eintragen und das Ergebnis drucken oder vorzeigen.
+- Die Umfrage (Mootimeter) und der Abgabeordner der Mental-Map-Aufgabe entfallen.
+- Die Moodle-Testfragen (Drag & Drop, Lückentext, Zuordnung usw.) wurden nachgebaut.
+- "Planquadrat (Suchgitter)" steht jetzt unter "Karten suchen" (vorher unter "Karten lesen").
+- Einige Überschriften-Bilder lagen auf einem internen Server des Landes und fehlen deshalb.
+
+Lizenz: Die Inhalte stammen aus dem OER-Kurs "Digitaler Atlasführerschein"
+(Digitalassistenz für Schulen in Sachsen-Anhalt, moodle.bildung-lsa.de), überwiegend CC BY-SA.
+Quellen- und Lizenzangaben stehen bei den jeweiligen Bildern und unter "Rights of use" in den Übungen.
