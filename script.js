@@ -10,14 +10,16 @@ const PAGES = [
 ];
 
 function renderChrome() {
-  const here = location.pathname.split("/").pop() || "index.html";
+  // Seiten in Unterordnern setzen data-base="../" und data-section="erdkunde.html".
+  const base = document.body.dataset.base || "";
+  const here = document.body.dataset.section || location.pathname.split("/").pop() || "index.html";
   const nav = document.getElementById("nav");
   if (nav) {
     nav.innerHTML = `
       <div class="wrap">
-        <a class="brand" href="index.html">☀︎ Frau KIbach</a>
+        <a class="brand" href="${base}index.html">☀︎ Frau KIbach</a>
         <ul>${PAGES.map(
-          (p) => `<li><a class="link${p.href === here ? " active" : ""}" href="${p.href}">${p.label}</a></li>`
+          (p) => `<li><a class="link${p.href === here ? " active" : ""}" href="${base}${p.href}">${p.label}</a></li>`
         ).join("")}</ul>
       </div>`;
   }
