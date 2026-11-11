@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Earth entdecken · Frau KIbach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+  <style>
+    .lesson-bar {
+      position: sticky; top: 64px; z-index: 5;
+      display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between;
+      background: var(--paper); border-radius: 999px; box-shadow: var(--shadow);
+      padding: 10px 22px; margin: 10px 0 24px;
+    }
+    .progress { flex: 1 1 200px; height: 12px; background: var(--sand); border-radius: 999px; overflow: hidden; }
+    .progress span { display: block; height: 100%; width: 0; background: var(--olive); transition: width .4s; }
+    .timer { font-family: "Caveat", cursive; font-size: 1.7rem; color: var(--olive); min-width: 70px; text-align: center; }
+    .step { position: relative; }
+    .step .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+    .tag { display: inline-block; background: var(--accent-soft); color: var(--ink); border-radius: 999px; padding: 2px 12px; font-size: .88rem; font-weight: 700; }
+    .step h2 { margin-bottom: .2em; }
+    .step ol, .step ul { padding-left: 1.3em; }
+    .step li { margin: 6px 0; }
+    .tip { background: var(--cream); border-left: 4px solid var(--mustard); border-radius: 0 14px 14px 0; padding: 10px 16px; margin: 14px 0; }
+    .write { width: 100%; font: inherit; border: 2px dashed var(--sand); background: var(--cream); border-radius: 14px; padding: 10px 14px; min-height: 70px; resize: vertical; }
+    .write:focus { outline: none; border-color: var(--accent); }
+    details { margin: 12px 0; }
+    summary { cursor: pointer; font-weight: 700; color: var(--accent); }
+    .done { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-weight: 700; cursor: pointer; }
+    .done input { width: 22px; height: 22px; accent-color: var(--olive); }
+    .step.is-done { opacity: .75; }
+    .step.is-done h2::after { content: " ✓"; color: var(--olive); }
+    .keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 14px 0; }
+    .key { background: var(--cream); border-radius: 16px; padding: 12px 14px; }
+    .key b { display: block; }
+    kbd { background: var(--paper); border: 1px solid var(--sand); border-bottom-width: 3px; border-radius: 6px; padding: 0 6px; font-family: inherit; font-size: .9em; }
+    .badge { text-align: center; }
+    .badge .seal {
+      width: 150px; height: 150px; margin: 6px auto 12px; border-radius: 50%;
+      display: grid; place-items: center; text-align: center;
+      background: var(--accent-soft); border: 3px dashed var(--olive);
+      font-family: "Caveat", cursive; font-size: 1.5rem; line-height: 1.1; color: var(--olive);
+    }
+    .teacher { background: transparent; border: 2px dashed var(--sand); box-shadow: none; }
+    @media (max-width: 600px) { .lesson-bar { border-radius: 22px; top: 0; position: static; } }
+  </style>
+</head>
+<body class="ek" data-base="../" data-section="erdkunde.html">
+  <nav class="nav" id="nav"></nav>
+  <header class="page-head wrap">
+    <span class="script" style="font-size:1.8rem">Erdkunde · ca. 30 Minuten</span>
+    <h1>🌍 Google Earth entdecken</h1>
+    <p>Flieg mit Google Earth um die ganze Welt! In dieser Stunde lernst du, wie du Orte findest, Gebäude in 3D betrachtest und Entfernungen misst.</p>
+  </header>
+
+  <main class="wrap">
+    <div class="lesson-bar">
+      <strong><span id="count">0</span> von <span id="total">6</span> Aufträgen geschafft</strong>
+      <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+      <span class="timer" id="timer">30:00</span>
+      <button class="btn ghost" id="timerBtn" type="button">Zeit starten</button>
+    </div>
+
+    <!-- Start -->
+    <section class="panel step" data-step="1">
+      <div class="meta"><span class="tag">Start</span><span class="tag">⏱ 3 Minuten</span></div>
+      <h2>Google Earth öffnen</h2>
+      <ol>
+        <li>Klicke auf den Knopf unten. Google Earth öffnet sich in einem neuen Tab, direkt im Browser.</li>
+        <li>Du musst nichts installieren und dich <strong>nicht anmelden</strong>. Falls ein Fenster fragt, klicke auf „Schließen“ oder „Überspringen“.</li>
+        <li>Lass diese Lernseite offen. So kannst du zwischen den Tabs hin- und herwechseln.</li>
+      </ol>
+      <p><a class="btn" href="https://earth.google.com/web/" target="_blank" rel="noopener">Google Earth im Browser öffnen ↗</a></p>
+      <div class="tip">🌿 <strong>Sicher unterwegs:</strong> Benutze nur diesen Link. Lade keine App herunter und gib keine persönlichen Daten ein. Suche keine Adressen von Mitschülerinnen und Mitschülern.</div>
+      <label class="done"><input type="checkbox"> Google Earth ist offen</label>
+    </section>
+
+    <!-- Steuerung -->
+    <section class="panel step" data-step="2">
+      <div class="meta"><span class="tag">Auftrag 1</span><span class="tag">⏱ 5 Minuten</span></div>
+      <h2>Lerne die Steuerung kennen</h2>
+      <p class="hint">Probiere jede Bewegung einmal aus. Keine Sorge, du kannst nichts kaputt machen!</p>
+      <div class="keys">
+        <div class="key"><b>🖱️ Verschieben</b>Linke Maustaste gedrückt halten und ziehen.</div>
+        <div class="key"><b>🔍 Zoomen</b>Mausrad drehen oder die Knöpfe <kbd>+</kbd> und <kbd>−</kbd> unten rechts.</div>
+        <div class="key"><b>⛰️ Kippen</b><kbd>Umschalt</kbd> gedrückt halten und mit der Maus ziehen.</div>
+        <div class="key"><b>🧭 Norden</b>Klicke auf den Kompass unten rechts, dann zeigt Norden wieder nach oben.</div>
+        <div class="key"><b>🏠 Zurück zur Erde</b>Ganz weit herauszoomen, bis du die ganze Erdkugel siehst.</div>
+      </div>
+      <p><strong>Deine Aufgabe:</strong> Zoome von der ganzen Erdkugel bis nach Deutschland. Drehe die Erde dabei einmal komplett herum.</p>
+      <label class="done"><input type="checkbox"> Ich kann mich auf der Erde bewegen</label>
+    </section>
+
+    <!-- Schule finden -->
+    <section class="panel step" data-step="3">
+      <div class="meta"><span class="tag">Auftrag 2</span><span class="tag">⏱ 5 Minuten</span></div>
+      <h2>Finde unsere Schule</h2>
+      <ol>
+        <li>Klicke links auf die <strong>Lupe 🔍</strong> und gib den Namen unserer Schule und den Ort ein.</li>
+        <li>Google Earth fliegt automatisch dorthin. Zoome nah heran.</li>
+        <li>Schau dich um: Was liegt direkt neben der Schule? Gibt es einen Sportplatz, einen Wald, eine Straße oder einen Fluss?</li>
+      </ol>
+      <textarea class="write" data-key="schule" placeholder="Neben unserer Schule sehe ich …"></textarea>
+      <div class="tip">💡 Tipp: Zähle, wie viele Gebäude zu unserer Schule gehören.</div>
+      <label class="done"><input type="checkbox"> Ich habe unsere Schule gefunden</label>
+    </section>
+
+    <!-- 3D -->
+    <section class="panel step" data-step="4">
+      <div class="meta"><span class="tag">Auftrag 3</span><span class="tag">⏱ 5 Minuten</span></div>
+      <h2>Berühmte Orte in 3D</h2>
+      <ol>
+        <li>Suche mit der Lupe nach <strong>„Eiffelturm, Paris“</strong>.</li>
+        <li>Klicke unten rechts auf <strong>3D</strong> und kippe die Ansicht mit <kbd>Umschalt</kbd> + Maus. Fliege einmal um den Turm herum.</li>
+        <li>Zoome etwas heraus: Welcher Fluss fließt ganz in der Nähe des Eiffelturms?</li>
+      </ol>
+      <textarea class="write" data-key="fluss" placeholder="Der Fluss heißt …"></textarea>
+      <details><summary>Lösung anzeigen</summary><p>Es ist die <strong>Seine</strong>. Sie fließt mitten durch Paris.</p></details>
+      <label class="done"><input type="checkbox"> Ich habe den Eiffelturm in 3D gesehen</label>
+    </section>
+
+    <!-- Weltreise -->
+    <section class="panel step" data-step="5">
+      <div class="meta"><span class="tag">Auftrag 4</span><span class="tag">⏱ 7 Minuten</span></div>
+      <h2>Kleine Weltreise</h2>
+      <p class="hint">Reise zu diesen drei Orten. Finde heraus, in welchem Land und auf welchem Kontinent sie liegen.</p>
+      <div class="keys">
+        <div class="key"><b>🗽 Freiheitsstatue</b>Auf welcher Insel steht sie? Tipp: Zoome heraus und schau dir das Wasser rundherum an.</div>
+        <div class="key"><b>🐪 Pyramiden von Gizeh</b>In welchem Land stehen sie? Welche große Stadt liegt direkt daneben?</div>
+        <div class="key"><b>🪨 Uluru</b>Ein riesiger roter Felsen. Auf welchem Kontinent liegt er? Wie sieht die Landschaft drumherum aus?</div>
+      </div>
+      <textarea class="write" rows="4" data-key="reise" placeholder="Freiheitsstatue: …&#10;Pyramiden: …&#10;Uluru: …"></textarea>
+      <details><summary>Lösung anzeigen</summary>
+        <ul>
+          <li><strong>Freiheitsstatue:</strong> auf Liberty Island in New York, USA, Nordamerika</li>
+          <li><strong>Pyramiden von Gizeh:</strong> in Ägypten, Afrika, direkt neben der Stadt Kairo</li>
+          <li><strong>Uluru:</strong> in Australien, mitten in einer trockenen, roten Wüstenlandschaft</li>
+        </ul>
+      </details>
+      <label class="done"><input type="checkbox"> Ich war an allen drei Orten</label>
+    </section>
+
+    <!-- Messen + Abschluss -->
+    <section class="panel step" data-step="6">
+      <div class="meta"><span class="tag">Auftrag 5</span><span class="tag">⏱ 5 Minuten</span></div>
+      <h2>Messen und auf gut Glück reisen</h2>
+      <p><strong>a) Messen:</strong> Fliege zurück zu unserer Schule. Klicke links auf das <strong>Lineal 📏</strong>. Klicke auf den Anfang und das Ende des Schulhofs oder Sportplatzes. Wie lang ist er?</p>
+      <textarea class="write" data-key="messen" placeholder="Unser Schulhof / Sportplatz ist ungefähr … Meter lang."></textarea>
+      <p><strong>b) Auf gut Glück:</strong> Klicke links auf den <strong>Würfel 🎲</strong> („Ich bin auf gut Glück“). Google Earth schickt dich an einen überraschenden Ort. Wo bist du gelandet? Schreibe den Ort und eine Sache auf, die du dort siehst.</p>
+      <textarea class="write" data-key="glueck" placeholder="Ich bin gelandet in … Dort sehe ich …"></textarea>
+      <label class="done"><input type="checkbox"> Ich habe gemessen und gewürfelt</label>
+    </section>
+
+    <section class="panel badge hidden" id="badge">
+      <div class="seal">Google-Earth-<br>Entdecker:in<br>🌍</div>
+      <h2>Super, du hast alle Aufträge geschafft!</h2>
+      <p>Erzähle deiner Nachbarin oder deinem Nachbarn: Welcher Ort hat dir am besten gefallen und warum?</p>
+    </section>
+
+    <details class="panel teacher">
+      <summary>Hinweise für Lehrkräfte</summary>
+      <ul>
+        <li><strong>Ziel:</strong> Die Schülerinnen und Schüler lernen die Grundfunktionen von Google Earth kennen: Navigation, Suche, 3D-Ansicht, Messen.</li>
+        <li><strong>Dauer:</strong> ca. 30 Minuten (3 + 5 + 5 + 5 + 7 + 5 Minuten), Einzel- oder Partnerarbeit.</li>
+        <li><strong>Technik:</strong> Google Earth läuft im Browser unter earth.google.com/web, ohne Installation und ohne Anmeldung. Am besten mit Chrome, Edge oder Firefox. Eine Maus ist hilfreich.</li>
+        <li><strong>Notizen:</strong> Die Antworten in den Textfeldern bleiben nur auf diesem Gerät gespeichert. Zur Sicherung können sie abgeschrieben oder abfotografiert werden.</li>
+        <li><strong>Datenschutz:</strong> Bitte darauf hinweisen, dass keine Wohnadressen von Mitschülerinnen und Mitschülern gesucht werden.</li>
+      </ul>
+    </details>
+
+    <p><a class="back" href="../erdkunde.html">← zurück zu Erdkunde</a></p>
+  </main>
+
+  <footer id="footer"></footer>
+  <script src="../script.js"></script>
+  <script>
+    (function () {
+      const store = {
+        get(k) { try { return localStorage.getItem("ge-" + k); } catch (e) { return null; } },
+        set(k, v) { try { localStorage.setItem("ge-" + k, v); } catch (e) {} },
+      };
+      const steps = [...document.querySelectorAll(".step")];
+      const count = document.getElementById("count");
+      const bar = document.getElementById("bar");
+      const badge = document.getElementById("badge");
+      document.getElementById("total").textContent = steps.length;
+
+      function refresh() {
+        const n = steps.filter((s) => s.querySelector(".done input").checked).length;
+        count.textContent = n;
+        bar.style.width = (100 * n) / steps.length + "%";
+        badge.classList.toggle("hidden", n < steps.length);
+      }
+      steps.forEach((s) => {
+        const box = s.querySelector(".done input");
+        box.checked = store.get("step" + s.dataset.step) === "1";
+        s.classList.toggle("is-done", box.checked);
+        box.addEventListener("change", () => {
+          store.set("step" + s.dataset.step, box.checked ? "1" : "0");
+          s.classList.toggle("is-done", box.checked);
+          refresh();
+        });
+      });
+      document.querySelectorAll(".write").forEach((t) => {
+        t.value = store.get("txt-" + t.dataset.key) || "";
+        t.addEventListener("input", () => store.set("txt-" + t.dataset.key, t.value));
+      });
+      refresh();
+
+      // 30-Minuten-Uhr
+      const timer = document.getElementById("timer");
+      const btn = document.getElementById("timerBtn");
+      let left = 30 * 60, tick = null;
+      const show = () => (timer.textContent = String(Math.floor(left / 60)).padStart(2, "0") + ":" + String(left % 60).padStart(2, "0"));
+      btn.addEventListener("click", () => {
+        if (tick) { clearInterval(tick); tick = null; btn.textContent = "Weiter"; return; }
+        btn.textContent = "Pause";
+        tick = setInterval(() => {
+          left = Math.max(0, left - 1); show();
+          if (!left) { clearInterval(tick); tick = null; btn.textContent = "Zeit um!"; }
+        }, 1000);
+      });
+      show();
+    })();
+  </script>
+</body>
+</html>

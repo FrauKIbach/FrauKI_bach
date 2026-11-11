@@ -34,31 +34,12 @@
       <p><a class="btn" href="kalte-zone/index.html">Ordner öffnen →</a></p>
     </section>
     <section class="panel">
-      <h2>Welcher Kontinent?</h2>
-      <p class="hint">Ordne die Länder dem richtigen Kontinent zu.</p>
-      <div id="sorter"></div>
-    </section>
-    <section class="panel">
-      <h2>Lernkarten: Hauptstädte</h2>
-      <p class="hint">Tippe auf ein Land, um seine Hauptstadt zu sehen.</p>
-      <div class="flashcards" id="cards"></div>
+      <h2>📂 Google Earth entdecken</h2>
+      <p class="hint">Eine Stunde (ca. 30 Minuten) mit Lernaufträgen: Flieg um die Welt, finde unsere Schule und miss Entfernungen.</p>
+      <p><a class="btn" href="google-earth/index.html">Ordner öffnen →</a></p>
     </section>
   </main>
   <footer id="footer"></footer>
   <script src="script.js"></script>
-  <script>
-    mountSorter(document.getElementById("sorter"), [
-      { text: "Frankreich", bin: "Europa" }, { text: "Polen", bin: "Europa" },
-      { text: "Kenia", bin: "Afrika" }, { text: "Ägypten", bin: "Afrika" },
-      { text: "Japan", bin: "Asien" }, { text: "Indien", bin: "Asien" },
-      { text: "Brasilien", bin: "Amerika" }, { text: "Kanada", bin: "Amerika" },
-    ], ["Europa", "Afrika", "Asien", "Amerika"]);
-    mountFlashcards(document.getElementById("cards"), [
-      { front: "Frankreich", back: "Paris" }, { front: "Italien", back: "Rom" },
-      { front: "Spanien", back: "Madrid" }, { front: "Österreich", back: "Wien" },
-      { front: "Polen", back: "Warschau" }, { front: "Norwegen", back: "Oslo" },
-      { front: "Japan", back: "Tokio" }, { front: "Australien", back: "Canberra" },
-    ]);
-  </script>
 </body>
 </html>
