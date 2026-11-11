@@ -15,14 +15,9 @@
   <header class="page-head wrap">
     <span class="script" style="font-size:1.8rem">digital denken</span>
     <h1>Informatik</h1>
-    <p>Wie rechnet ein Computer? Probier den Binär-Rechner aus und teste dein Wissen.</p>
+    <p>Computer-Grundlagen und digitales Denken: Teste dein Wissen rund um den Computer.</p>
   </header>
   <main class="wrap">
-    <section class="panel">
-      <h2>Binär-Rechner</h2>
-      <p class="hint">Computer rechnen nur mit 0 und 1. Tippe die Schalter an, bis die gesuchte Zahl entsteht.</p>
-      <div id="binary"></div>
-    </section>
     <section class="panel">
       <h2>Eingabe oder Ausgabe?</h2>
       <p class="hint">Ordne die Geräte richtig zu.</p>
@@ -32,7 +27,6 @@
   <footer id="footer"></footer>
   <script src="script.js"></script>
   <script>
-    mountBinary(document.getElementById("binary"));
     mountSorter(document.getElementById("sorter"), [
       { text: "Tastatur", bin: "Eingabegerät" }, { text: "Maus", bin: "Eingabegerät" }, { text: "Mikrofon", bin: "Eingabegerät" }, { text: "Scanner", bin: "Eingabegerät" },
       { text: "Bildschirm", bin: "Ausgabegerät" }, { text: "Drucker", bin: "Ausgabegerät" }, { text: "Lautsprecher", bin: "Ausgabegerät" }, { text: "Beamer", bin: "Ausgabegerät" },
