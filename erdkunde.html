@@ -34,11 +34,6 @@
       <p><a class="btn" href="kalte-zone/index.html">Ordner öffnen →</a></p>
     </section>
     <section class="panel">
-      <h2>Quiz: Rund um die Welt</h2>
-      <p class="hint">Wähle die richtige Antwort aus.</p>
-      <div id="quiz"></div>
-    </section>
-    <section class="panel">
       <h2>Welcher Kontinent?</h2>
       <p class="hint">Ordne die Länder dem richtigen Kontinent zu.</p>
       <div id="sorter"></div>
@@ -52,15 +47,6 @@
   <footer id="footer"></footer>
   <script src="script.js"></script>
   <script>
-    mountQuiz(document.getElementById("quiz"), [
-      { q: "Wie viele Kontinente gibt es?", options: ["7", "5", "6", "9"], answer: 0 },
-      { q: "Welcher ist der größte Ozean der Erde?", options: ["Pazifischer Ozean", "Atlantischer Ozean", "Indischer Ozean", "Arktischer Ozean"], answer: 0 },
-      { q: "Welcher Fluss ist der längste in Deutschland?", options: ["Rhein", "Elbe", "Donau", "Main"], answer: 0, explain: "Der Rhein fließt rund 865 km durch Deutschland." },
-      { q: "Wie heißt der höchste Berg Deutschlands?", options: ["Zugspitze", "Brocken", "Feldberg", "Watzmann"], answer: 0 },
-      { q: "Wie heißt die gedachte Linie, die die Erde in Nord- und Südhalbkugel teilt?", options: ["Äquator", "Nullmeridian", "Wendekreis", "Polarkreis"], answer: 0 },
-      { q: "In welcher Klimazone liegt Deutschland?", options: ["Gemäßigte Zone", "Tropen", "Polarzone", "Subtropen"], answer: 0 },
-      { q: "Wie viele Bundesländer hat Deutschland?", options: ["16", "12", "14", "18"], answer: 0 },
-    ]);
     mountSorter(document.getElementById("sorter"), [
       { text: "Frankreich", bin: "Europa" }, { text: "Polen", bin: "Europa" },
       { text: "Kenia", bin: "Afrika" }, { text: "Ägypten", bin: "Afrika" },

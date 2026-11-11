@@ -24,11 +24,6 @@
       <div id="binary"></div>
     </section>
     <section class="panel">
-      <h2>Quiz: Computer-Grundlagen</h2>
-      <p class="hint">Wähle die richtige Antwort aus.</p>
-      <div id="quiz"></div>
-    </section>
-    <section class="panel">
       <h2>Eingabe oder Ausgabe?</h2>
       <p class="hint">Ordne die Geräte richtig zu.</p>
       <div id="sorter"></div>
@@ -38,14 +33,6 @@
   <script src="script.js"></script>
   <script>
     mountBinary(document.getElementById("binary"));
-    mountQuiz(document.getElementById("quiz"), [
-      { q: "Wie viele Bit hat ein Byte?", options: ["8", "2", "10", "16"], answer: 0 },
-      { q: "Was ist die Binärzahl 101 im Zehnersystem?", options: ["5", "3", "101", "7"], answer: 0, explain: "4 + 0 + 1 = 5" },
-      { q: "Was ist ein Algorithmus?", options: ["Eine eindeutige Schritt-für-Schritt-Anleitung", "Ein Computervirus", "Ein Teil der Tastatur", "Ein Speicherchip"], answer: 0 },
-      { q: "Welches Passwort ist am sichersten?", options: ["T0m@te!Sonne#42", "123456", "passwort", "MeinName"], answer: 0 },
-      { q: "Wofür steht die Abkürzung CPU?", options: ["Central Processing Unit", "Computer Power Unit", "Central Print Unit", "Control Program Unit"], answer: 0 },
-      { q: "Was ist größer?", options: ["1 Gigabyte", "1 Megabyte", "1 Kilobyte", "1 Byte"], answer: 0 },
-    ]);
     mountSorter(document.getElementById("sorter"), [
       { text: "Tastatur", bin: "Eingabegerät" }, { text: "Maus", bin: "Eingabegerät" }, { text: "Mikrofon", bin: "Eingabegerät" }, { text: "Scanner", bin: "Eingabegerät" },
       { text: "Bildschirm", bin: "Ausgabegerät" }, { text: "Drucker", bin: "Ausgabegerät" }, { text: "Lautsprecher", bin: "Ausgabegerät" }, { text: "Beamer", bin: "Ausgabegerät" },

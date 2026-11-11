@@ -19,11 +19,6 @@
   </header>
   <main class="wrap">
     <section class="panel">
-      <h2>Quiz: Ernährung &amp; Küche</h2>
-      <p class="hint">Wähle die richtige Antwort aus.</p>
-      <div id="quiz"></div>
-    </section>
-    <section class="panel">
       <h2>Wo wird es gelagert?</h2>
       <p class="hint">Ordne die Lebensmittel dem richtigen Lagerort zu.</p>
       <div id="sorter"></div>
@@ -37,14 +32,6 @@
   <footer id="footer"></footer>
   <script src="script.js"></script>
   <script>
-    mountQuiz(document.getElementById("quiz"), [
-      { q: "Wovon sollte man laut Ernährungspyramide am meisten essen bzw. trinken?", options: ["Getränke wie Wasser", "Süßigkeiten", "Fleisch und Wurst", "Öle und Fette"], answer: 0 },
-      { q: "Wie viele Portionen Obst und Gemüse am Tag werden empfohlen?", options: ["5", "2", "1", "10"], answer: 0, explain: "Die Regel heißt „5 am Tag“." },
-      { q: "Welcher Nährstoff liefert vor allem Energie?", options: ["Kohlenhydrate", "Vitamine", "Mineralstoffe", "Wasser"], answer: 0 },
-      { q: "Was solltest du vor dem Kochen immer zuerst tun?", options: ["Hände waschen", "Den Ofen ausschalten", "Den Tisch decken", "Das Rezept wegräumen"], answer: 0 },
-      { q: "Welches Lebensmittel enthält besonders viel Eiweiß?", options: ["Linsen", "Apfel", "Gurke", "Reiswaffel"], answer: 0 },
-      { q: "Was bedeutet „Mindesthaltbarkeitsdatum“?", options: ["Bis dahin ist das Produkt mindestens gut, oft auch länger", "Danach muss man es sofort wegwerfen", "Das Datum, an dem es hergestellt wurde", "Das Datum, an dem es gekauft wurde"], answer: 0 },
-    ]);
     mountSorter(document.getElementById("sorter"), [
       { text: "Milch", bin: "Kühlschrank" }, { text: "Joghurt", bin: "Kühlschrank" }, { text: "Butter", bin: "Kühlschrank" },
       { text: "Nudeln", bin: "Vorratsschrank" }, { text: "Mehl", bin: "Vorratsschrank" }, { text: "Reis", bin: "Vorratsschrank" },
